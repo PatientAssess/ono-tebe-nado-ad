@@ -1,1 +1,386 @@
-/* место для вашего кода */
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 8;
+}
+
+
+/* =========================
+   HEADER CONTAINER
+========================= */
+
+.header {
+  position: relative;
+  width: 1100px;
+  height: 293px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   MENU (LEFT)
+========================= */
+
+.header__menu {
+  position: absolute;
+  left: 50px;
+  top: 133px;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 33px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+}
+
+.header__link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+/* =========================
+   LOGO (CENTER)
+========================= */
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  top: 92px;
+  transform: translateX(-50%);
+}
+
+.header__logo-image {
+  width: 148px;
+  height: auto;
+}
+
+/* =========================
+   CONTACTS (RIGHT)
+========================= */
+
+.header__address {
+  width: 240px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.header__address {
+  position: absolute;
+  right: 50px;
+  top: 95px;
+
+  width: 240px;
+
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.5;
+
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* COVER */
+
+.cover {
+  position: relative;
+  width: 1100px;
+  height: 757px;
+
+  background: url("../images/cover.jpg")
+    center/cover no-repeat;
+
+  color: #fff;
+}
+
+/* затемнение */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0.6;
+}
+
+/* TITLE */
+
+.cover__title {
+  position: relative;
+  z-index: 2;
+
+  padding: 165px 50px 0;
+
+  font-size: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  line-height: 1.15;
+}
+
+/* строки заголовка */
+.aligned-text {
+  display: block;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+/* DESCRIPTION BLOCK */
+.cover__description {
+  position: absolute;
+  bottom: 48px;
+  left: 50px;
+  right: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* текст слева */
+.cover__description-text {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+/* BUTTON */
+.bet-button {
+  width: 256px;
+  height: 51px;
+
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+/* LOTS */
+
+.lots {
+  padding: 180px 50px;
+}
+
+.lots__heading {
+  font-size: 40px;
+  margin-bottom: 27px;
+}
+
+.lots__card-list {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lots__card-list-item {
+  width: 334px;
+  min-height: 596px;
+}
+
+/* CARD */
+
+.card {
+  position: relative;
+  width: 334px;
+  height: 596px;
+  color: white;
+  overflow: hidden;
+}
+
+/* фон через background */
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+}
+
+.card_type_film,
+.card_type_book,
+.card_type_picture {
+  background-size: cover;
+  background-position: center;
+}
+
+/* overlay */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* TITLE (как в Figma) */
+.card__title {
+  position: absolute;
+  top: 48px;
+  left: 40px;
+  right: 40px;
+
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+  line-height: 1.2;
+
+  z-index: 2;
+}
+
+/* TEXT (как в Figma) */
+.card__text {
+  position: absolute;
+  bottom: 48px;
+  left: 40px;
+  right: 40px;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+
+  z-index: 2;
+}
+
+
+.lots__look-more-link {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 64px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  display: flex;
+  gap: 72px;
+
+  padding: 155px 50px 0;
+  align-items: flex-start;
+}
+
+/* LOGO */
+.about__logo {
+  width: 240px;
+  height: 240px;
+  background: #000;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+}
+
+/* TEXT BLOCK */
+.about__column {
+  max-width: 693px;
+}
+
+.about__title {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 100px 0;
+  color: #000;
+}
+
+.about__text {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.about__text p {
+  margin: 0 0 24px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 180px 50px 90px;
+}
+
+/* CONTACTS */
+.address {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.address a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* MENU */
+.footer__menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+  font-size: 18px;
+}
+
+.footer__menu-list li {
+  margin-bottom: 8px;
+}
+
+.footer__menu-list a {
+  text-decoration: underline;
+}
+
+/* SOCIALS */
+.footer__social-list {
+  display: flex;
+  gap: 48px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__social-list a {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.footer__social-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
